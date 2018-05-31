@@ -44,7 +44,7 @@ def main():
     df = pd.read_csv(filename,sep=";",converters={'date_time': parse_dates})
 
     result = st_dbscan(df, spatial_threshold, temporal_threshold, minPts)
-    print "Time Elapsed: {} seconds".format(time.time()-start)
+    print ("Time Elapsed: {} seconds".format(time.time()-start))
 
     timestr = time.strftime("%Y%m%d-%H%M%S")
 
